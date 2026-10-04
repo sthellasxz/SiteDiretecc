@@ -149,7 +149,7 @@ carregarFoto("hero").then((src) => {
 // Foto do cartão de destaque dos serviços: fotos/direcao.jpg
 document.querySelectorAll("[data-foto]").forEach(async (caixa) => {
   const src = await carregarFoto(caixa.dataset.foto);
-  if (src) colocarFoto(caixa, src, "Serviço de direção na Diretec");
+  if (src) colocarFoto(caixa, src, "Conserto de direção hidráulica na oficina Diretec em Joinville");
 });
 
 // Galeria: fotos/oficina-1.jpg, oficina-2.jpg ... (até 12). A seção só aparece se houver foto.
@@ -157,10 +157,10 @@ document.querySelectorAll("[data-foto]").forEach(async (caixa) => {
   const achadas = (await Promise.all(Array.from({ length: 12 }, (_, i) => carregarFoto(`oficina-${i + 1}`)))).filter(Boolean);
   if (!achadas.length) return;
   const grid = document.getElementById("galeriaGrid");
-  achadas.forEach((src) => {
+  achadas.forEach((src, i) => {
     const img = new Image();
     img.src = src;
-    img.alt = "Foto da oficina Diretec em Joinville";
+    img.alt = `Oficina Diretec em Joinville, foto ${i + 1}`;
     img.loading = "lazy";
     img.decoding = "async";
     grid.appendChild(img);

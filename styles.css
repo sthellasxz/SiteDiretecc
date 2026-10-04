@@ -70,7 +70,7 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
 /* ---------- Cabeçalho ---------- */
 .header { position: sticky; top: 0; z-index: 50; background: var(--escuro); color: var(--branco); border-bottom: 1px solid var(--borda-escura); }
 .header-in { display: flex; align-items: center; gap: 28px; min-height: 76px; }
-.marca { text-decoration: none; flex: none; }
+.marca { text-decoration: none; flex: none; display: flex; align-items: center; min-height: 44px; }
 .marca img { height: 50px; width: auto; }
 .marca-texto { font: italic 800 26px/1 var(--f-titulo); letter-spacing: -.02em; color: var(--branco); }
 .marca-texto b { color: var(--amarelo); font-weight: 800; }
@@ -102,9 +102,20 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
 
 /* ---------- Hero ---------- */
 .hero { padding-block: clamp(48px, 7vw, 88px) clamp(64px, 8vw, 104px); overflow: hidden; }
-.hero-in { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
+.hero-in { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
 .pill-tag { display: inline-block; font-size: 14px; font-weight: 600; color: var(--texto-claro); border: 1px solid rgba(255, 255, 255, .18); border-radius: 999px; padding: 7px 14px; margin-bottom: 24px; }
-.hero h1 { font-size: clamp(46px, 7vw, 86px); line-height: .98; letter-spacing: -.035em; }
+.hero h1 { font-size: clamp(40px, 4.6vw, 64px); line-height: 1; letter-spacing: -.035em; }
+/* "Orçamento caro?" (pergunta, discreta) / "Segunda avaliação" / "grátis." */
+.hero h1 .linha { display: block; }
+/* "Segunda avaliação grátis." sempre numa linha só: a fonte acompanha a largura da coluna de texto
+   (a frase ocupa ~11,5x o tamanho da fonte, por isso 8.4% da largura) */
+.hero-texto { container-type: inline-size; }
+.hero h1 .linha-resposta { white-space: nowrap; font-size: min(48px, 3.4vw); }
+@supports (font-size: 1cqi) {
+  .hero h1 { font-size: min(64px, 8.4cqi); }
+  .hero h1 .linha-resposta { font-size: 1em; }
+}
+.hero h1 .linha-pergunta { font-size: .50em; font-weight: 200; color: var(--texto-claro); letter-spacing: -.02em; margin-bottom: .3em; }
 .hero .lead { margin-top: 22px; }
 .hero-botoes { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 32px; }
 
@@ -178,7 +189,7 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
 .servico { background: var(--branco); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 6px; min-height: 160px; }
 .servico h3 { font-size: 20px; }
 .servico p { font-size: 15px; line-height: 1.45; color: var(--texto-suave); margin-bottom: 10px; }
-.servico a { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px; text-decoration: none; }
+.servico a { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 700; font-size: 15px; text-decoration: none; } /* 44px: área de toque confortável no celular */
 .servico a svg { width: 16px; height: 16px; transition: transform .15s ease; }
 .servico a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .servico a:hover svg { transform: translateX(3px); }
@@ -196,7 +207,7 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
 
 .servico-ajuda { grid-column: span 3; background: var(--escuro); color: var(--branco); border-radius: 18px; padding: 24px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 24px; }
 .servico-ajuda h3 { font-size: 26px; }
-.servico-ajuda p { color: var(--texto-claro); font-size: 15px; margin-top: 6px; }
+.servico-ajuda p { color: var(--texto-claro); font-size: 15px; margin-top: 6px; max-width: 60ch; }
 
 /* ---------- Como funciona ---------- */
 .como { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 100px); align-items: start; }
@@ -316,7 +327,9 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
   .hero-logo { width: min(60%, 260px); }
   .hero-depo { display: none; }
   .pill-tag, .hero-botoes { display: none; }
-  .hero h1 { font-size: clamp(40px, 11.5vw, 56px); }
+  .hero h1 { font-size: clamp(32px, 10.2vw, 56px); }
+  .hero h1 .linha-resposta { font-size: min(56px, calc((100vw - 40px) / 11.8)); }
+  @supports (font-size: 1cqi) { .hero h1 { font-size: min(56px, 8.4cqi); } .hero h1 .linha-resposta { font-size: 1em; } }
   .hero .lead { margin-top: 14px; font-size: 17px; }
   .prova { margin-top: 18px; }
   .prova-nota { font-size: 20px; }
