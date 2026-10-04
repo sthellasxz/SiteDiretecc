@@ -30,15 +30,18 @@ Depois abra `http://localhost:5173`.
 
 ## Seções da página
 
-1. **Topo:** título, botão de orçamento, Instagram, Google e a logo em destaque
-2. **Sinais de alerta:** sintomas de problema na direção
-3. **Como funciona:** 3 passos e os números da oficina (21 anos, garantia, orçamento grátis)
-4. **Horários:** quadro com os dias da semana
-5. **Serviços:** carrossel com 11 serviços, cada um com botão de orçamento
+1. **Topo:** título, botões de WhatsApp e Ligar, nota do Google, selos (orçamento grátis, garantia, sem agendar) e foto da oficina (`fotos/hero.jpg`). No cabeçalho, o selo "Aberto agora" é calculado sozinho pelo horário de Joinville
+2. **Segunda opinião:** casos reais do Google (outra oficina errou, a Diretec resolveu) e a nota 4,7
+3. **Sinais de alerta:** sintomas de problema na direção
+4. **Serviços:** grade com todos os serviços à vista, Direção em destaque (`fotos/direcao.jpg`), e o horário numa linha
+5. **Como funciona:** 3 passos e os números da oficina
 6. **Linha pesada:** destaque para caminhões e frotas
-7. **Depoimentos:** avaliações reais do Google
+7. **Galeria:** aparece sozinha quando houver `fotos/oficina-1.jpg`, `oficina-2.jpg`...
 8. **Dúvidas:** perguntas frequentes
 9. **Contato:** endereço, horário, telefones e formulário que abre o WhatsApp
+
+No celular, uma barra fixa embaixo da tela mostra os botões WhatsApp e Ligar.
+A versão anterior do site está guardada em `backup-antes-redesign/`.
 
 ## Como alterar
 
@@ -51,7 +54,7 @@ const CONFIG = {
   whatsapp: "5547997521518",      // só números: 55 + DDD + número
   telefone: "554730319177",
   instagram: "diretec_centro_automotivo",
-  google: "https://share.google/N3Iyr68N8iAn45In0",
+  google: "https://search.google.com/local/reviews?placeid=ChIJnaYCM6Ox3pQRAgDT1E1HHM0", // abre direto as avaliações
   maps: "Diretec Centro Automotivo, Rua Ary Barroso 228, Floresta, Joinville SC",
 };
 ```

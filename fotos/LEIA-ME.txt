@@ -1,0 +1,16 @@
+FOTOS DO SITE
+=============
+Coloque aqui as fotos. O site usa sozinho as que existirem; onde faltar foto, continua o visual sem foto.
+Formatos aceitos: .jpg, .jpeg, .webp ou .png. Tamanho ideal: 1200 px de largura, até 300 KB cada.
+
+Foto principal do topo (a mais importante):
+  hero.jpg  -> foto vertical da equipe ou de um mecânico trabalhando na direção,
+               uniforme e logo visíveis, boa luz.
+
+Foto do cartão "Direção" (destaque dos serviços):
+  direcao.jpg  -> caixa de direção na bancada ou mecânico mexendo na direção.
+
+Galeria "Nossa oficina" (até 12 fotos, a seção só aparece se houver pelo menos uma):
+  oficina-1.jpg, oficina-2.jpg, oficina-3.jpg ...
+  A primeira aparece maior.
+  Sugestões: fachada, equipe, elevador, caminhão no box, peça antiga ao lado da nova.
