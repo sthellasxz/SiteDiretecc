@@ -43,6 +43,9 @@ teste.src = "logo.jpg";
   const el = document.querySelector("[data-status]");
   if (!el) return;
   const txt = el.querySelector("[data-status-texto]");
+  const det = el.querySelector("[data-status-detalhe]");
+  // No celular só a primeira parte aparece ("Aberto agora"); no computador aparece tudo
+  const mostrar = (principal, detalhe) => { txt.textContent = principal; det.textContent = detalhe ? ` · ${detalhe}` : ""; };
   const min = (hhmm) => { const [h, m] = hhmm.split(":").map(Number); return h * 60 + m; };
   const fmt = (hhmm) => { const [h, m] = hhmm.split(":"); return `${Number(h)}h${m === "00" ? "" : m}`; };
   const NOMES = ["dom", "seg", "ter", "qua", "qui", "sex", "sáb"];
@@ -58,13 +61,14 @@ teste.src = "logo.jpg";
       const turno = CONFIG.turnos.find(([a, f]) => agora >= min(a) && agora < min(f));
       if (turno) {
         el.classList.add("aberto");
-        txt.textContent = `Aberto agora · até ${fmt(turno[1])}`;
+        mostrar("Aberto agora", `até ${fmt(turno[1])}`);
         return;
       }
       const proximo = CONFIG.turnos.find(([a]) => agora < min(a));
       if (proximo) {
         el.classList.remove("aberto");
-        txt.textContent = agora >= min(CONFIG.turnos[0][1]) ? `Almoço · volta às ${fmt(proximo[0])}` : `Abre hoje às ${fmt(proximo[0])}`;
+        if (agora >= min(CONFIG.turnos[0][1])) mostrar("Almoço", `volta às ${fmt(proximo[0])}`);
+        else mostrar(`Abre hoje às ${fmt(proximo[0])}`);
         return;
       }
     }
@@ -72,7 +76,7 @@ teste.src = "logo.jpg";
     let d = dia, n = 0;
     do { d = (d + 1) % 7; n++; } while (!CONFIG.dias.includes(d) && n < 7);
     el.classList.remove("aberto");
-    txt.textContent = `Fechado · abre ${n === 1 ? "amanhã" : NOMES[d]} ${fmt(CONFIG.turnos[0][0])}`;
+    mostrar("Fechado", `abre ${n === 1 ? "amanhã" : NOMES[d]} ${fmt(CONFIG.turnos[0][0])}`);
   }
   atualizar();
   setInterval(atualizar, 60 * 1000);

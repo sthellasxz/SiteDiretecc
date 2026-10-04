@@ -81,6 +81,7 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
 .header-tel { font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap; }
 .header-tel:hover { color: var(--amarelo); }
 .menu-btn { display: none; }
+.so-cel { display: none; }
 
 /* Selo "Aberto agora" (o script.js calcula pelo horário de Joinville) */
 .status { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--texto-claro); white-space: nowrap; }
@@ -301,19 +302,30 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
   .servico-ajuda { grid-column: 1 / -1; }
 }
 @media (max-width: 860px) {
-  .hero-in, .confianca, .como, .pesada, .duvidas, .contato { grid-template-columns: 1fr; }
-  .hero { padding-block: 0 48px; }
-  .hero-in { gap: 28px; }
-  /* No celular a foto vem primeiro, larga, e o depoimento fica fora dela */
-  .hero { padding-top: 40px; }
-  .hero:has(.com-foto) { padding-top: 0; }
+  .hero-in, .confianca, .como, .pesada, .duvidas, .contato { grid-template-columns: minmax(0, 1fr); }
+  /* ----- Topo no celular (igual à prancheta "Celular proposto") -----
+     foto larga no alto, título, texto curto, nota, 2 selos.
+     Os botões ficam só na barra fixa embaixo da tela. */
+  .hero { padding-block: 0 40px; }
+  .hero-in { gap: 24px; }
   .hero-visual { order: -1; min-height: 0; margin-inline: calc(-1 * clamp(20px, 4vw, 48px)); }
-  .hero-visual.sem-foto { display: none; } /* sem foto, não repete a logo que já está no topo */
-  .hero-foto { position: relative; height: 240px; border-radius: 0; border: 0; }
-  .hero-logo { width: 60%; }
+  .hero-foto {
+    position: relative; height: clamp(210px, 56vw, 320px); border-radius: 0; border: 0; border-bottom: 1px solid var(--borda-escura);
+    background: var(--escuro); /* mesmo preto da logo, até a foto fotos/hero.jpg chegar */
+  }
+  .hero-logo { width: min(60%, 260px); }
   .hero-depo { display: none; }
+  .pill-tag, .hero-botoes { display: none; }
   .hero h1 { font-size: clamp(40px, 11.5vw, 56px); }
-  .selos { flex-direction: column; gap: 10px; }
+  .hero .lead { margin-top: 14px; font-size: 17px; }
+  .prova { margin-top: 18px; }
+  .prova-nota { font-size: 20px; }
+  .prova-txt { font-size: 14px; }
+  .selos { flex-direction: column; gap: 10px; margin-top: 20px; padding-top: 0; border-top: 0; font-size: 15px; }
+  .selos svg { width: 18px; height: 18px; }
+  .status-detalhe { display: none; }
+  .so-pc, .selos li.so-pc { display: none; }
+  .so-cel { display: inline; }
   .header-acoes .btn { display: none; }
   .wa-flutuante { display: none; }
   .barra-mobile {
@@ -338,12 +350,22 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
   .numero strong { font-size: 22px; }
   .numero span { font-size: 14px; }
   .hero-botoes .btn, .contato-botoes .btn, .sinais-rodape .btn { width: 100%; }
+  /* Texto de botão pode quebrar linha no celular, nunca alargar a página */
+  .btn { white-space: normal; text-align: center; line-height: 1.25; max-width: 100%; }
+  .btn-grande { padding: 18px 22px; font-size: 17px; }
   .servicos { grid-template-columns: minmax(0, 1fr); }
   .servico-destaque, .servico-ajuda { grid-column: auto; grid-row: auto; }
   .servico { min-height: 0; }
   .caso-antes-depois { grid-template-columns: 1fr; }
   .caso-seta { transform: rotate(90deg); margin-inline: auto; }
   .form { padding: 22px; }
+}
+@media (max-width: 380px) {
+  /* Celulares pequenos: o selo de horário quebra em duas linhas em vez de empurrar o menu */
+  .header-acoes { min-width: 0; gap: 10px; }
+  .status { white-space: normal; font-size: 12px; line-height: 1.25; min-width: 0; }
+  .marca img { height: 34px; }
+  .menu-btn { flex: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
