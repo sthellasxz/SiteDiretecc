@@ -112,7 +112,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
 });
 
 /* ---------- Fotos: usa as imagens da pasta "fotos" se existirem ---------- */
-const EXTENSOES = ["jpg", "jpeg", "webp", "png"];
+const EXTENSOES = ["jpg", "jpeg", "webp", "avif", "png"];
 function carregarFoto(nome) {
   return new Promise((resolve) => {
     let i = 0;

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diretec Centro Automotivo | Especialistas em direção em Joinville</title>
+  <meta name="description" content="Há 21 anos em Joinville. Especialistas em direção hidráulica, elétrica e assistida, da linha leve à pesada. Segunda opinião e orçamento grátis, garantia de até 1 ano.">
+  <meta name="theme-color" content="#121212">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23121212'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23F5B20A' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23F5B20A'/%3E%3Cpath d='M6 15h7M19 15h7M16 19v7' stroke='%23F5B20A' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Ícones reutilizados -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z" fill="currentColor"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+</svg>
+
+<!-- ===== CABEÇALHO ===== -->
+<header class="header" id="topo">
+  <div class="wrap header-in">
+    <a class="marca" href="#topo" aria-label="Diretec Centro Automotivo, início">
+      <img src="logo.jpg" alt="Diretec Centro Automotivo" data-logo hidden>
+      <span class="marca-texto" data-logo-texto>DIR<b>ETEC</b></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Menu principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#linha-pesada">Linha pesada</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-acoes">
+      <span class="status" data-status><span class="status-ponto"></span><span><span data-status-texto>Seg a sex</span><span class="status-detalhe" data-status-detalhe>, 7h45 às 18h</span></span></span>
+      <a class="header-tel" data-link="tel" href="#contato">(47) 3031-9177</a>
+      <a class="btn btn-amarelo btn-sm" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#contato">Orçamento no WhatsApp</a>
+      <button class="menu-btn" id="menuBtn" aria-controls="nav" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="hero escuro">
+    <div class="wrap hero-in">
+      <div class="hero-texto">
+        <span class="pill-tag">Especialistas em direção · Joinville há 21 anos</span>
+        <h1><span class="linha">Volante duro?</span> <span class="linha">A gente resolve.</span></h1>
+        <p class="lead">Direção hidráulica, elétrica e assistida, de carros a caminhões. <span class="so-pc">Você vê o problema, sabe o preço e só então decide.</span><span class="so-cel">Orçamento grátis.</span></p>
+
+        <div class="hero-botoes">
+          <a class="btn btn-amarelo btn-grande" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#contato">
+            <svg aria-hidden="true"><use href="#i-wa"/></svg>
+            Pedir orçamento sem compromisso !
+          </a>
+          <a class="btn btn-contorno-claro" data-link="tel" href="#contato">
+            <svg aria-hidden="true"><use href="#i-tel"/></svg>
+            Ligar
+          </a>
+        </div>
+
+        <a class="prova" data-link="google" href="#contato" target="_blank" rel="noopener" aria-label="Nota 4,7 de 5 com 215 avaliações no Google">
+          <span class="prova-nota">4,7</span>
+          <span class="prova-estrelas" aria-hidden="true">★★★★★</span>
+          <span class="prova-txt">215 avaliações no Google</span>
+        </a>
+
+        <ul class="selos">
+          <li class="so-pc"><svg aria-hidden="true"><use href="#i-check"/></svg>Orçamento sem compromisso</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Garantia de até 1 ano</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span class="so-pc">Sem agendar</span><span class="so-cel">Pode vir sem agendar</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual sem-foto">
+        <!-- Coloque fotos/hero.jpg (foto vertical da equipe ou de um mecânico trabalhando) e ela aparece aqui sozinha -->
+        <div class="hero-foto" id="heroFoto">
+          <img class="hero-logo" src="logo.jpg" alt="" data-logo hidden>
+        </div>
+        <figure class="hero-depo">
+          <span class="estrelas-p" aria-label="5 de 5 estrelas">★★★★★</span>
+          <blockquote>“Lugar mais confiável em Joinville pra resolver problemas no seu carro.”</blockquote>
+          <figcaption><b>Daniel M.</b> · Avaliação no Google</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEGUNDA OPINIÃO + AVALIAÇÕES ===== -->
+  <section class="secao claro" id="avaliacoes">
+    <div class="wrap confianca">
+      <div class="confianca-texto">
+        <p class="sobretitulo">Segunda Avaliação grátis</p>
+        <h2 class="titulo-grande">Já te deram um orçamento caro? Traga antes de trocar a peça.</h2>
+        <p class="texto">Muita gente chega aqui com o diagnóstico de outra oficina. A gente refaz a avaliação de graça e mostra o que o veículo tem de verdade, com foto e vídeo.</p>
+        <a class="btn btn-escuro" data-wa="Olá! Já tenho um orçamento de outra oficina e gostaria de uma segunda opinião." href="#contato">Quero uma segunda avaliação</a>
+        <div class="nota-google">
+          <strong>4,7</strong>
+          <div>
+            <span class="estrelas-p" aria-hidden="true">★★★★★</span>
+            <a data-link="google" href="#contato" target="_blank" rel="noopener">215 avaliações no Google</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="casos">
+        <figure class="caso">
+          <div class="caso-antes-depois">
+            <div class="caso-antes"><span>Outra oficina disse</span><s>Trocar a caixa de direção</s></div>
+            <svg class="caso-seta" aria-hidden="true"><use href="#i-seta"/></svg>
+            <div class="caso-depois"><span>A Diretec achou</span><b>Bieletas frouxas</b></div>
+          </div>
+          <blockquote>“Levei o carro para diagnóstico (outra oficina tinha falado ser problema na caixa de direção). Ficou constatado que o problema eram as bieletas frouxas. Conquistaram mais um cliente pela honestidade e qualidade do trabalho prestado!”</blockquote>
+          <figcaption><span class="avatar">R</span><span><strong>Raphael S.</strong><small>Avaliação no Google</small></span></figcaption>
+        </figure>
+        <figure class="caso">
+          <div class="caso-antes-depois">
+            <div class="caso-antes"><span>Antes</span><s>Bomba trocada 4 vezes</s></div>
+            <svg class="caso-seta" aria-hidden="true"><use href="#i-seta"/></svg>
+            <div class="caso-depois"><span>A Diretec resolveu</span><b>Porta-fusível isolado</b></div>
+          </div>
+          <blockquote>“Sensacional! Levei meu 307 com problema na bomba eletro hidráulica, que já tinha sido trocada 4 vezes. Fizeram um porta fusível isolado pra bomba e ela voltou a funcionar. Sem palavras pra honestidade de vocês e qualidade técnica no atendimento.”</blockquote>
+          <figcaption><span class="avatar">D</span><span><strong>Daniel M.</strong><small>Local Guide · Avaliação no Google</small></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SINAIS ===== -->
+  <section class="secao escuro-2" id="sinais">
+    <div class="wrap">
+      <p class="sobretitulo sobretitulo-claro">Sinais de alerta</p>
+      <h2>O volante está avisando?</h2>
+      <div class="sinais">
+        <div class="sinal"><span class="ponto"></span><p>Ficou duro ou pesado para virar.</p></div>
+        <div class="sinal"><span class="ponto"></span><p>Faz barulho quando você vira.</p></div>
+        <div class="sinal"><span class="ponto"></span><p>Tem mancha de óleo na garagem.</p></div>
+        <div class="sinal"><span class="ponto"></span><p>Puxa para um lado ou tem folga.</p></div>
+      </div>
+      <div class="sinais-rodape">
+        <p class="frase-destaque">Quanto antes avaliar, mais barato fica o conserto.</p>
+        <a class="btn btn-amarelo" data-wa="Olá! Meu veículo está com um problema na direção e gostaria de uma avaliação." href="#contato">Quero uma avaliação</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS (grade) ===== -->
+  <section class="secao claro-2" id="servicos">
+    <div class="wrap">
+      <div class="servicos-topo">
+        <h2 class="titulo-grande">O que o seu veículo precisa?</h2>
+        <div class="horario-chip"><span class="status-ponto"></span><b>Seg a sex</b><span>7h45–12h · 13h30–18h · sem agendar</span></div>
+      </div>
+
+      <div class="servicos">
+        <article class="servico-destaque">
+          <div class="servico-destaque-texto">
+            <span class="selo-novo">Especialidade</span>
+            <h3>Direção</h3>
+            <p>Hidráulica, elétrica e assistida. Volante duro, barulho, folga e vazamento.</p>
+            <a class="btn btn-amarelo btn-sm" data-wa="Olá! Gostaria de um orçamento para a direção do meu veículo." href="#contato">Pedir orçamento</a>
+          </div>
+          <!-- Coloque fotos/direcao.jpg e ela aparece aqui sozinha -->
+          <div class="servico-destaque-foto" data-foto="direcao">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="32" cy="32" r="6" fill="currentColor"/><path d="M9 30h17M38 30h17M32 38v18" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="servico">
+          <h3>Linha pesada</h3>
+          <p>Direção de caminhões e frotas, muitos prontos no mesmo dia.</p>
+          <a data-wa="Olá! Gostaria de um orçamento para caminhão / veículo de frota." href="#contato">Pedir orçamento <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="servico">
+          <h3>Suspensão</h3>
+          <p>Amortecedores, molas, bandejas, buchas e bieletas.</p>
+          <a data-wa="Olá! Gostaria de um orçamento para a suspensão." href="#contato">Pedir orçamento <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="servico">
+          <h3>Freios</h3>
+          <p>Pastilhas, discos, lonas, tambores e fluido.</p>
+          <a data-wa="Olá! Gostaria de um orçamento para os freios." href="#contato">Pedir orçamento <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="servico">
+          <h3>Alinhamento e balanceamento</h3>
+          <p>Volante no centro e pneus durando mais.</p>
+          <a data-wa="Olá! Gostaria de fazer alinhamento e balanceamento." href="#contato">Pedir orçamento <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="servico">
+          <h3>Motor e embreagem</h3>
+          <p>Retífica, junta, correia dentada, embreagem patinando.</p>
+          <a data-wa="Olá! Gostaria de um orçamento para motor/embreagem." href="#contato">Pedir orçamento <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="servico">
+          <h3>Óleo e filtros</h3>
+          <p>Óleo certo para o motor e filtros de óleo, ar e combustível.</p>
+          <a data-wa="Olá! Gostaria de fazer a troca de óleo e filtros." href="#contato">Pedir orçamento <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="servico">
+          <h3>Arrefecimento</h3>
+          <p>Radiador, bomba d'água e mangueiras. Evita superaquecimento.</p>
+          <a data-wa="Olá! Gostaria de um orçamento para o sistema de arrefecimento." href="#contato">Pedir orçamento <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="servico">
+          <h3>Injeção e scanner</h3>
+          <p>Diagnóstico eletrônico da injeção, da direção elétrica e dos módulos.</p>
+          <a data-wa="Olá! Gostaria de agendar um diagnóstico eletrônico." href="#contato">Pedir orçamento <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="servico">
+          <h3>Revisões e laudo</h3>
+          <p>Preventiva, para viagem e laudo de compra e venda.</p>
+          <a data-wa="Olá! Gostaria de agendar uma revisão / laudo." href="#contato">Pedir orçamento <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="servico-ajuda">
+          <div>
+            <h3>Não sabe o que o carro tem?</h3>
+            <p>Conte o que está sentindo e mande foto ou vídeo. A gente orienta sem compromisso.</p>
+          </div>
+          <a class="btn btn-amarelo" data-wa="Olá! Meu veículo está com um problema e não sei o que é. Podem me ajudar?" href="#contato">Falar com a equipe</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMO FUNCIONA ===== -->
+  <section class="secao claro" id="como-funciona">
+    <div class="wrap">
+      <div class="como">
+        <div>
+          <h2 class="titulo-grande">Você traz. A gente explica tudo.</h2>
+          <p class="texto">Há 21 anos a Diretec atende Joinville com honestidade, respeito e compromisso. Você entende o que o veículo tem, sabe quanto vai custar e decide antes de qualquer serviço.</p>
+        </div>
+        <div>
+          <ol class="passos">
+            <li>
+              <h3>Traga o veículo</h3>
+              <p>Pode vir direto, sem agendar, ou chamar no WhatsApp antes.</p>
+            </li>
+            <li>
+              <h3>Receba o orçamento</h3>
+              <p>Diagnóstico e orçamento grátis. O serviço só começa com a sua aprovação.</p>
+            </li>
+            <li>
+              <h3>Retire com garantia</h3>
+              <p>Mostramos as peças trocadas e mandamos fotos e vídeos do serviço.</p>
+            </li>
+          </ol>
+          <a class="btn btn-escuro" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#contato">Quero um orçamento</a>
+        </div>
+      </div>
+
+      <div class="numeros">
+        <div class="numero"><strong>21 anos</strong><span>atendendo Joinville</span></div>
+        <div class="numero"><strong>Leve e pesada</strong><span>de carros a caminhões</span></div>
+        <div class="numero"><strong>Garantia</strong><span>de 3 meses a 1 ano, conforme o serviço</span></div>
+        <div class="numero"><strong>Grátis</strong><span>orçamento e diagnóstico inicial</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LINHA PESADA ===== -->
+  <section class="secao escuro" id="linha-pesada">
+    <div class="wrap pesada">
+      <div>
+        <h2>Caminhão parado é prejuízo.</h2>
+        <p class="lead">Atendemos frotistas e empresas de Joinville e região com reparo e revisão de direção da linha pesada.</p>
+        <a class="btn btn-amarelo" data-wa="Olá! Gostaria de um orçamento para caminhão / frota." href="#contato">Orçamento para frota</a>
+      </div>
+      <ul class="lista-check">
+        <li>Direção hidráulica de caminhões e utilitários</li>
+        <li>Muitos serviços prontos no mesmo dia</li>
+        <li>Orçamento grátis, aprovado antes do serviço</li>
+        <li>Garantia de 3 meses a 1 ano, conforme o serviço</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== GALERIA (aparece sozinha quando houver fotos em fotos/oficina-1.jpg, oficina-2.jpg...) ===== -->
+  <section class="secao claro" id="galeria" hidden>
+    <div class="wrap">
+      <p class="sobretitulo">Nossa oficina</p>
+      <h2 class="titulo-grande">Veja onde o seu veículo fica.</h2>
+      <div class="galeria" id="galeriaGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== DÚVIDAS ===== -->
+  <section class="secao claro-2" id="duvidas">
+    <div class="wrap duvidas">
+      <h2 class="titulo-grande">Ficou com alguma dúvida?</h2>
+      <div class="faq">
+        <details>
+          <summary>Vocês atendem todas as marcas?</summary>
+          <p>Sim. Atendemos carros de passeio, SUVs, caminhonetes, utilitários, vans, importados, caminhões e frotas de empresas, de todas as marcas.</p>
+        </details>
+        <details>
+          <summary>Preciso agendar?</summary>
+          <p>Não. Pode vir direto no horário comercial. Se preferir, chame no WhatsApp antes para adiantar o atendimento.</p>
+        </details>
+        <details>
+          <summary>O orçamento é cobrado?</summary>
+          <p>Não. O orçamento é grátis e nenhum serviço começa sem a sua aprovação.</p>
+        </details>
+        <details>
+          <summary>Já tenho orçamento de outra oficina. Vocês avaliam?</summary>
+          <p>Sim. Refazemos o diagnóstico sem custo e explicamos o que o veículo realmente tem antes de qualquer troca de peça.</p>
+        </details>
+        <details>
+          <summary>Os serviços têm garantia?</summary>
+          <p>Sim. A garantia vai de 3 meses a 1 ano, conforme o serviço. Ela é informada junto com o orçamento.</p>
+        </details>
+        <details>
+          <summary>Vocês fazem socorro?</summary>
+          <p>Sim, em horário comercial. Chame no WhatsApp ou ligue informando onde o veículo está.</p>
+        </details>
+        <details>
+          <summary>Quais as formas de pagamento?</summary>
+          <p>Pix, dinheiro, débito e crédito, com parcelamento no cartão.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="secao claro" id="contato">
+    <div class="wrap contato">
+      <div>
+        <h2 class="titulo-grande">Fale com a Diretec.</h2>
+        <p class="texto">Chame no WhatsApp, conte o que o veículo está apresentando e venha quando for melhor para você.</p>
+        <div class="contato-botoes">
+          <a class="btn btn-amarelo" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#contato"><svg aria-hidden="true"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+          <a class="btn btn-contorno-escuro" data-link="tel" href="#contato"><svg aria-hidden="true"><use href="#i-tel"/></svg>Ligar</a>
+        </div>
+
+        <dl class="info">
+          <div><dt>WhatsApp</dt><dd><a data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#contato">(47) 99752-1518</a></dd></div>
+          <div><dt>Telefone</dt><dd><a data-link="tel" href="#contato">(47) 3031-9177</a></dd></div>
+          <div><dt>Horário</dt><dd>Segunda a sexta, das 7h45 às 12h e das 13h30 às 18h. Sábado e domingo fechado.</dd></div>
+          <div><dt>Endereço</dt><dd>Rua Ary Barroso, 228, Floresta, Joinville (SC)<br><a data-link="maps" href="#contato" target="_blank" rel="noopener">Como chegar</a></dd></div>
+        </dl>
+      </div>
+
+      <form class="form" id="form">
+        <h3>Prefere deixar um recado?</h3>
+        <p>Preencha e o WhatsApp abre com a mensagem pronta para enviar.</p>
+        <label for="f-nome">Nome</label>
+        <input id="f-nome" type="text" autocomplete="name" required>
+        <label for="f-veiculo">Veículo (opcional)</label>
+        <input id="f-veiculo" type="text" placeholder="Ex.: Hilux 2018, Volvo FH">
+        <label for="f-servico">Serviço de interesse (opcional)</label>
+        <select id="f-servico">
+          <option>Ainda não sei</option>
+          <option>Direção</option>
+          <option>Segunda opinião de orçamento</option>
+          <option>Linha pesada / frota</option>
+          <option>Suspensão</option>
+          <option>Freios</option>
+          <option>Alinhamento e balanceamento</option>
+          <option>Motor e embreagem</option>
+          <option>Troca de óleo e filtros</option>
+          <option>Arrefecimento</option>
+          <option>Injeção e scanner</option>
+          <option>Revisões e laudo</option>
+        </select>
+        <label for="f-msg">Mensagem (opcional)</label>
+        <textarea id="f-msg" rows="3" placeholder="Conte o que o veículo está apresentando"></textarea>
+        <button class="btn btn-amarelo" type="submit">Continuar no WhatsApp</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <span class="marca-texto">DIR<b>ETEC</b></span>
+    <div class="rodape-redes">
+      <a class="pill-rede" data-link="instagram" href="#contato" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>Instagram</a>
+      <a class="pill-rede" data-link="google" href="#contato" target="_blank" rel="noopener">Avaliações no Google</a>
+    </div>
+    <p>Rua Ary Barroso, 228, Floresta, Joinville (SC) · © <span id="ano"></span> Diretec Centro Automotivo</p>
+  </div>
+</footer>
+
+<!-- Computador: botão redondo. Celular: barra fixa com WhatsApp e Ligar -->
+<a class="wa-flutuante" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#contato" aria-label="Falar no WhatsApp">
+  <svg aria-hidden="true"><use href="#i-wa"/></svg>
+</a>
+<div class="barra-mobile">
+  <a class="btn btn-amarelo" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#contato"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+  <a class="btn btn-contorno-claro" data-link="tel" href="#contato"><svg aria-hidden="true"><use href="#i-tel"/></svg>Ligar</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

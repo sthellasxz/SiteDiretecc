@@ -1,7 +1,7 @@
 FOTOS DO SITE
 =============
 Coloque aqui as fotos. O site usa sozinho as que existirem; onde faltar foto, continua o visual sem foto.
-Formatos aceitos: .jpg, .jpeg, .webp ou .png. Tamanho ideal: 1200 px de largura, até 300 KB cada.
+Formatos aceitos: .jpg, .jpeg, .webp, .avif ou .png. Tamanho ideal: 1200 px de largura, até 300 KB cada.
 
 Foto principal do topo (a mais importante):
   hero.jpg  -> foto vertical da equipe ou de um mecânico trabalhando na direção,

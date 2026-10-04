@@ -135,7 +135,7 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
   background: var(--escuro); border: 1px solid var(--borda-escura); /* mesmo preto da logo */
   display: grid; place-items: center;
 }
-.hero-foto img.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-foto img.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
 .hero-logo { width: 70%; height: auto; }
 .hero-foto.com-foto .hero-logo { display: none; }
 .hero-depo {
@@ -321,10 +321,12 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
   .hero-in { gap: 24px; }
   .hero-visual { order: -1; min-height: 0; margin-inline: calc(-1 * clamp(20px, 4vw, 48px)); }
   .hero-foto {
-    position: relative; height: clamp(210px, 56vw, 320px); border-radius: 0; border: 0; border-bottom: 1px solid var(--borda-escura);
+    position: relative; height: clamp(220px, 64vw, 380px); border-radius: 0; border: 0; border-bottom: 1px solid var(--borda-escura);
     background: var(--escuro); /* mesmo preto da logo, até a foto fotos/hero.jpg chegar */
   }
   .hero-logo { width: min(60%, 260px); }
+  /* Celular: foto em faixa larga, enquadrada no rosto e nos braços do mecânico */
+  .hero-foto img.hero-img { object-position: 50% 62%; }
   .hero-depo { display: none; }
   .pill-tag, .hero-botoes { display: none; }
   .hero h1 { font-size: clamp(32px, 10.2vw, 56px); }
