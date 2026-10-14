@@ -146,10 +146,85 @@ carregarFoto("hero").then((src) => {
   document.querySelector(".hero-visual").classList.remove("sem-foto");
 });
 
-// Foto do cartão de destaque dos serviços: fotos/direcao.jpg
+// Fotos dos serviços do carrossel: fotos/servico-direcao.jpg, fotos/servico-freios.jpg ... (nome no data-foto)
 document.querySelectorAll("[data-foto]").forEach(async (caixa) => {
   const src = await carregarFoto(caixa.dataset.foto);
-  if (src) colocarFoto(caixa, src, "Conserto de direção hidráulica na oficina Diretec em Joinville");
+  if (src) colocarFoto(caixa, src, caixa.dataset.alt || "");
+});
+
+/* ---------- Carrossel de serviços ---------- */
+document.querySelectorAll("[data-carrossel]").forEach((carrossel) => {
+  const trilho = carrossel.querySelector(".carrossel-trilho");
+  const slides = [...trilho.children];
+  const pontos = carrossel.querySelector("[data-pontos]");
+  const anterior = carrossel.querySelector("[data-anterior]");
+  const proximo = carrossel.querySelector("[data-proximo]");
+  const semAnimacao = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const passo = () => slides[1].offsetLeft - slides[0].offsetLeft;
+  const fim = () => trilho.scrollLeft >= trilho.scrollWidth - trilho.clientWidth - 4;
+  // Último cartão que ainda pode ficar encostado na esquerda (no computador aparecem 3 por vez, então não é o último da lista)
+  const ultimoInicio = () => Math.round((trilho.scrollWidth - trilho.clientWidth) / passo());
+  const posicao = () => Math.min(Math.round(trilho.scrollLeft / passo()), ultimoInicio());
+  // Ponto aceso: no fim do trilho acende o último, mesmo com 3 cartões na tela
+  const atual = () => (fim() ? slides.length - 1 : posicao());
+  const irPara = (i) => trilho.scrollTo({ left: Math.max(0, Math.min(i, ultimoInicio())) * passo() });
+
+  // Um ponto por serviço
+  const botoes = slides.map((slide, i) => {
+    slide.setAttribute("aria-label", `${i + 1} de ${slides.length}`);
+    slide.style.setProperty("--i", i);
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "carrossel-ponto";
+    b.setAttribute("aria-label", `Ver ${slide.querySelector("h3").textContent}`);
+    b.addEventListener("click", () => { irPara(i); reiniciar(); });
+    pontos.appendChild(b);
+    return b;
+  });
+
+  function marcar() {
+    const i = atual();
+    botoes.forEach((b, n) => b.setAttribute("aria-current", n === i ? "true" : "false"));
+    anterior.disabled = trilho.scrollLeft <= 4;
+    proximo.disabled = fim();
+  }
+  let espera;
+  trilho.addEventListener("scroll", () => { cancelAnimationFrame(espera); espera = requestAnimationFrame(marcar); }, { passive: true });
+  window.addEventListener("resize", marcar);
+  anterior.addEventListener("click", () => { irPara(posicao() - 1); reiniciar(); });
+  proximo.addEventListener("click", () => { irPara(posicao() + 1); reiniciar(); });
+  trilho.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") { e.preventDefault(); irPara(posicao() + 1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); irPara(posicao() - 1); }
+  });
+  marcar();
+
+  if (semAnimacao) return;
+
+  // Entrada animada quando a seção aparece na tela
+  carrossel.classList.add("anima");
+  const olho = new IntersectionObserver((itens) => {
+    if (!itens[0].isIntersecting) return;
+    carrossel.classList.add("visivel");
+    olho.disconnect();
+    // Depois da entrada, tira as classes para o efeito de passar o mouse responder sem atraso
+    setTimeout(() => carrossel.classList.remove("anima", "visivel"), slides.length * 90 + 700);
+  }, { threshold: 0.2 });
+  olho.observe(carrossel);
+
+  // Troca sozinho a cada 5 s; para quando a pessoa está mexendo nele
+  let timer, pausado = false, visivel = false;
+  const avancar = () => { if (!pausado && visivel && !document.hidden) irPara(fim() ? 0 : posicao() + 1); };
+  function reiniciar() { if (semAnimacao) return; clearInterval(timer); timer = setInterval(avancar, 5000); }
+  carrossel.addEventListener("mouseenter", () => { pausado = true; });
+  carrossel.addEventListener("mouseleave", () => { pausado = false; });
+  carrossel.addEventListener("focusin", () => { pausado = true; });
+  carrossel.addEventListener("focusout", () => { pausado = false; });
+  trilho.addEventListener("touchstart", () => { pausado = true; }, { passive: true });
+  trilho.addEventListener("touchend", () => { pausado = false; reiniciar(); }, { passive: true });
+  new IntersectionObserver((itens) => { visivel = itens[0].isIntersecting; }, { threshold: 0.4 }).observe(carrossel);
+  reiniciar();
 });
 
 // Galeria: fotos/oficina-1.jpg, oficina-2.jpg ... (até 12). A seção só aparece se houver foto.

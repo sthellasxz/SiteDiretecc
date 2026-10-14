@@ -7,8 +7,19 @@ Foto principal do topo (a mais importante):
   hero.jpg  -> foto vertical da equipe ou de um mecânico trabalhando na direção,
                uniforme e logo visíveis, boa luz.
 
-Foto do cartão "Direção" (destaque dos serviços):
-  direcao.jpg  -> caixa de direção na bancada ou mecânico mexendo na direção.
+Carrossel de serviços (o cartão é quadrado; foto quadrada ou em pé encaixa melhor):
+  servico-direcao.jpg        -> caixa de direção na bancada ou mecânico mexendo na direção
+  suspensao.jpg              -> amortecedor, bandeja ou carro no elevador
+  servico-freios.jpg         -> disco e pastilha
+  servico-alinhamento.jpg    -> máquina de alinhamento
+  servico-motor.jpg          -> motor aberto ou embreagem
+  servico-oleo.jpg           -> troca de óleo
+  servico-arrefecimento.jpg  -> radiador
+  scan.jpg                   -> scanner ligado no carro
+  servico-revisao.jpg        -> mecânico fazendo revisão
+  Para um serviço novo: no index.html, copie um bloco <article class="slide">,
+  troque o texto e o data-foto (ex.: data-foto="servico-escapamento") e coloque
+  servico-escapamento.jpg aqui.
 
 Galeria "Nossa oficina" (até 12 fotos, a seção só aparece se houver pelo menos uma):
   oficina-1.jpg, oficina-2.jpg, oficina-3.jpg ...
