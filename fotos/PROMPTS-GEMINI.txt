@@ -1,0 +1,56 @@
+PROMPTS PARA GERAR AS FOTOS DO CARROSSEL NO GEMINI
+===================================================
+Fotos que faltam: servico-direcao, servico-freios, servico-alinhamento, servico-motor,
+servico-oleo, servico-arrefecimento, servico-revisao.
+
+Os prompts imitam o estilo das fotos reais (suspensao.jpg e scan.jpg): foto de celular,
+oficina com parede branca, faixa amarela e rodapé preto, teto de madeira escura, piso de
+cimento cinza e luz fluorescente. Assim as imagens geradas combinam com as verdadeiras.
+
+Depois de gerar: salve como .jpg com o nome indicado, cerca de 1200 px de largura e até
+300 KB, e coloque nesta pasta "fotos".
+
+---------------------------------------------------------------------
+1) servico-direcao.jpg
+---------------------------------------------------------------------
+Foto realista tirada com celular, formato vertical 3:4, dentro de uma oficina mecânica brasileira. Em primeiro plano, uma caixa de direção hidráulica desmontada sobre uma bancada de metal, com mangueiras, terminais de direção e ferramentas ao lado (chave de boca, soquetes). As mãos de um mecânico com luvas pretas seguram a caixa de direção. Ao fundo, desfocado: parede branca com uma faixa amarela horizontal e a parte de baixo pintada de preto, um carro no elevador e luz fluorescente no teto. Iluminação natural de oficina, cores fiéis, leve granulação de celular. Sem texto, sem logotipos de marcas, sem rosto visível.
+
+---------------------------------------------------------------------
+2) servico-freios.jpg
+---------------------------------------------------------------------
+Foto realista tirada com celular, formato vertical 3:4, em uma oficina mecânica brasileira. Close de uma roda dianteira de um carro de passeio suspenso no elevador, sem o pneu: disco de freio, pinça de freio e pastilhas aparentes. Um mecânico com luvas pretas encaixa uma pastilha nova na pinça; ao lado, sobre o piso, a pastilha velha e gasta. Ao fundo, desfocado: parede branca com faixa amarela e rodapé preto, piso de cimento cinza. Luz fluorescente de oficina, aparência de foto real e sem edição. Sem texto, sem logotipos, sem rosto visível.
+
+---------------------------------------------------------------------
+3) servico-alinhamento.jpg
+---------------------------------------------------------------------
+Foto realista tirada com celular, formato vertical 3:4, em uma oficina mecânica brasileira. Um carro de passeio sobre a rampa de alinhamento, com os sensores/alvos de alinhamento 3D presos nas rodas. Em primeiro plano, à direita, o monitor da máquina de alinhamento mostrando gráficos de cambagem e convergência em verde e vermelho (sem texto legível). Ao fundo: parede branca com faixa amarela horizontal e parte de baixo preta, teto de madeira escura e luzes fluorescentes. Aparência de foto real tirada pelo dono da oficina, cores naturais. Sem logotipos de marcas, sem pessoas em destaque.
+
+---------------------------------------------------------------------
+4) servico-motor.jpg
+---------------------------------------------------------------------
+Foto realista tirada com celular, formato vertical 3:4, em uma oficina mecânica brasileira. Vista de cima do cofre do motor de um carro de passeio com o capô aberto, motor parcialmente desmontado: tampa de válvulas removida, correia dentada nova à mostra e algumas peças organizadas sobre um pano azul em cima do para-lama. As mãos de um mecânico com luvas pretas apertam um parafuso com uma catraca. Fundo desfocado de oficina com parede branca e faixa amarela. Luz de oficina, detalhes metálicos nítidos, aparência de foto real. Sem texto, sem logotipos, sem rosto visível.
+
+---------------------------------------------------------------------
+5) servico-oleo.jpg
+---------------------------------------------------------------------
+Foto realista tirada com celular, formato vertical 3:4, em uma oficina mecânica brasileira. Vista por baixo de um carro suspenso no elevador: o óleo velho, escuro, escorre do bujão do cárter para um coletor de óleo amarelo. Ao lado, as mãos de um mecânico com luvas pretas seguram um filtro de óleo novo. Ao fundo, desfocado: piso de cimento cinza, colunas pretas do elevador, parede branca com faixa amarela e rodapé preto. Luz fluorescente, aparência de foto real, sem edição exagerada. Sem texto legível, sem logotipos de marcas, sem rosto visível.
+
+---------------------------------------------------------------------
+6) servico-arrefecimento.jpg
+---------------------------------------------------------------------
+Foto realista tirada com celular, formato vertical 3:4, em uma oficina mecânica brasileira. Close no cofre do motor de um carro de passeio com o capô aberto: radiador, reservatório de água com líquido de arrefecimento rosa e mangueiras do sistema de arrefecimento. Um mecânico com luvas pretas encaixa uma mangueira nova e aperta a abraçadeira. Ao fundo, desfocado: oficina com parede branca, faixa amarela e luz fluorescente. Cores naturais, detalhes nítidos, aparência de foto real. Sem texto, sem logotipos, sem rosto visível.
+
+---------------------------------------------------------------------
+7) servico-revisao.jpg
+---------------------------------------------------------------------
+Foto realista tirada com celular, formato vertical 3:4, em uma oficina mecânica brasileira. Um mecânico de uniforme preto com detalhes amarelos, de costas ou de perfil (rosto não visível), segura uma prancheta com um checklist de revisão e uma lanterna, inspecionando a parte de baixo de um carro de passeio suspenso no elevador. Ao fundo: parede branca com faixa amarela horizontal e parte de baixo preta, painel de ferramentas na parede, teto de madeira escura, piso de cimento cinza. Luz fluorescente de oficina, aparência de foto real. Sem texto legível, sem logotipos de marcas.
+
+---------------------------------------------------------------------
+DICAS
+---------------------------------------------------------------------
+- Se a imagem vier "perfeita demais" (cara de propaganda), peça no Gemini:
+  "deixe mais parecida com uma foto comum de celular, menos brilho e menos saturação".
+- Se aparecer texto ou logotipo inventado, peça: "remova todo texto e logotipo".
+- Para padronizar, envie a foto suspensao.jpg junto no Gemini e escreva antes do prompt:
+  "Use esta foto como referência de ambiente e estilo:".
+- Quando tiver fotos reais desses serviços, troque: foto real da oficina passa mais confiança.
