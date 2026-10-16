@@ -200,7 +200,8 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
 .slide:hover .slide-foto img { transform: scale(1.06); }
 .slide-foto.com-foto > svg { display: none; }
 /* Fotos em pé: escolhe a parte que aparece no recorte do cartão */
-.slide-foto[data-foto="suspensao"] img { object-position: 50% 36%; } /* carro no elevador com a suspensão à mostra */
+.slide-foto[data-foto="suspensao"] img { object-position: 50% 42%; } /* RAM no elevador com a suspensão à mostra */
+.slide-foto[data-foto="servico-alinhamento"] img { object-position: 50% 62%; } /* roda com a garra do alinhador */
 .slide-foto[data-foto="scan"] img { object-position: 50% 90%; }      /* painel e tela do scanner */
 .slide-foto .selo-novo { position: absolute; top: 14px; left: 14px; z-index: 1; }
 .slide-texto { padding: 22px 22px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
