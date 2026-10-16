@@ -104,17 +104,9 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
 .hero { padding-block: clamp(48px, 7vw, 88px) clamp(64px, 8vw, 104px); overflow: hidden; }
 .hero-in { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
 .pill-tag { display: inline-block; font-size: 14px; font-weight: 600; color: var(--texto-claro); border: 1px solid rgba(255, 255, 255, .18); border-radius: 999px; padding: 7px 14px; margin-bottom: 24px; }
-.hero h1 { font-size: clamp(40px, 4.6vw, 64px); line-height: 1; letter-spacing: -.035em; }
-/* "Mecânica completa para o seu carro." (linha discreta) / "Com honestidade de verdade." (destaque) */
+.hero h1 { font-size: clamp(28px, 2.7vw, 40px); line-height: 1.1; letter-spacing: -.03em; max-width: 22ch; }
+/* "Mecânica completa para o seu carro." (linha discreta) / frase principal (destaque) */
 .hero h1 .linha { display: block; }
-/* "Com honestidade de verdade." sempre numa linha só: a fonte acompanha a largura da coluna de texto
-   (a frase ocupa ~13,4x o tamanho da fonte; 6.8% da largura deixa ~9% de folga antes da imagem) */
-.hero-texto { container-type: inline-size; }
-.hero h1 .linha-resposta { white-space: nowrap; font-size: min(48px, 2.8vw); }
-@supports (font-size: 1cqi) {
-  .hero h1 { font-size: min(64px, 6.8cqi); }
-  .hero h1 .linha-resposta { font-size: 1em; }
-}
 .hero h1 .linha-pergunta { font-size: max(16px, .50em); font-weight: 200; color: var(--texto-claro); letter-spacing: -.02em; margin-bottom: .3em; }
 .hero .lead { margin-top: 22px; }
 .hero-botoes { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 32px; }
@@ -370,9 +362,7 @@ h3 { font-family: var(--f-titulo); font-weight: 700; font-size: 21px; line-heigh
   .hero-foto img.hero-img { object-position: 50% 62%; }
   .hero-depo { display: none; }
   .pill-tag, .hero-botoes { display: none; }
-  .hero h1 { font-size: clamp(32px, 10.2vw, 56px); }
-  .hero h1 .linha-resposta { font-size: min(56px, calc((100vw - 40px) / 14.6)); }
-  @supports (font-size: 1cqi) { .hero h1 { font-size: min(56px, 6.8cqi); } .hero h1 .linha-resposta { font-size: 1em; } }
+  .hero h1 { font-size: clamp(24px, 7vw, 32px); max-width: none; }
   .hero .lead { margin-top: 14px; font-size: 17px; }
   .prova { margin-top: 18px; }
   .prova-nota { font-size: 20px; }
